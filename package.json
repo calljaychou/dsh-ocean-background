@@ -1,0 +1,29 @@
+{
+  "name": "dsh-ocean-background",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An animated ASCII ocean background for DeepSeek Harness.",
+  "license": "MIT",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
